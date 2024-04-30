@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import "./CartPage.css";
+import config from "../../config.json";
 import Table from "../Common/Table";
 import QuantityInput from "../SingleProduct/QuantityInput";
 import remove from "../../assets/remove.png";
@@ -40,7 +41,7 @@ const CartPage = () => {
     <section className="cart_page align_center">
       <div className="user_info align_center">
         <img
-          src={`http://localhost:5000/profile/${user?.profilePic}`}
+          src={`${config.backendURL}/profile/${user?.profilePic}`}
           alt="user_profile"
         />
         <div>
